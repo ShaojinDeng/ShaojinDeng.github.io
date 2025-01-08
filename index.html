@@ -27,23 +27,25 @@
 
     <div>
       <h3>Parameters below are returned from GTM</h3>
-      <h5>"customerid:<span id="key1Display"></span></h5>
-      <h5>"customerid:<span id="key2Display"></span></h5>
+      <h5>customerid:<span id="key1Display"></span></h5>
+      <h5>customeremail:<span id="key2Display"></span></h5>
     
     </div>
     
     <script>
       function sendValue(){
         window.location.href="https://shaojindeng.github.io?key1=ShaojinDengTest&key2=echod8900@163.com";
-        alert("success!")
+        alert("success!");
+        document.addEventListener('DOMContentLoaded', function() {
+          console.log('web--',dataLayer,dataLayer[3].customerid)
+          var key1Value = dataLayer[3].customerid;
+          var key2Value = dataLayer[3].customeremail;
+          document.getElementById('key1Display').textContent = key1Value;
+          document.getElementById('key2Display').textContent = key2Value;
+        });
       }
 
-      document.addEventListener('DOMContentLoaded', function() {
-        var key1Value = dataLayer[3].customerid;
-        var key2Value = dataLayer[3].customeremail;
-        document.getElementById('key1Display').textContent = key1Value;
-        document.getElementById('key2Display').textContent = key2Value;
-    });
+    
     </script>
   </body>
   
