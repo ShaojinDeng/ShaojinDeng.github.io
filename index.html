@@ -20,8 +20,16 @@
     <!-- End Google Tag Manager (noscript) -->
     
     <h1>Welcome to the demo page</h1>
-    <h3>Pleace click the button below to send the url value in GTM</h3>
-    <button onclick="sendValue()" > Save </button>
+      <div>
+        <h3>Click the button "SAVE" to send the url key value to GTM</h3>
+        <button onclick="sendValue()" > SAVE </button>
+      </div>
+    <div>
+      <h3>Parameters returned from GTM</h3>
+      <span>customerid:</span>
+      <span>customeremail:</span>
+    </div>
+    
     
     <script>
       function sendValue(){
