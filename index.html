@@ -28,6 +28,7 @@
     <div>
       <h3>Parameters below are returned from GTM</h3>
       <h5>"customerid:<span id="key1Display"></span></h5>
+      <h5>"customerid:<span id="key2Display"></span></h5>
     
     </div>
     
@@ -38,10 +39,10 @@
       }
 
       document.addEventListener('DOMContentLoaded', function() {
-        var key1Value = dataLayer[0].customerid;
-        // var key2Value = dataLayer[0].key2;
+        var key1Value = dataLayer[3].customerid;
+        var key2Value = dataLayer[3].customeremail;
         document.getElementById('key1Display').textContent = key1Value;
-        // document.getElementById('key2Display').textContent = key2Value;
+        document.getElementById('key2Display').textContent = key2Value;
     });
     </script>
   </body>
