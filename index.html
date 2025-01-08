@@ -21,22 +21,24 @@
     
     <h1>Welcome to the demo page</h1>
       <div>
-        <h3>Click the button "GO" to send the url key value to GTM</h3>
-        <button onclick="sendValue()" > GO </button>
+        <h3>Click the button "SEND" to send the url key value to GTM</h3>
+        <button onclick="sendValue()" > SEND </button>
       </div>
 
     <div>
       <h3>Parameters below are returned from GTM</h3>
-      <h5>customerid:<span id="key1Display"></span></h5>
-      <h5>customeremail:<span id="key2Display"></span></h5>
+      <button onclick=showValue()" > SHOW </button>
+      <div>customerid:<div id="key1Display"></div></div>
+      <div>customeremail:<div id="key2Display"></div></div>
     
     </div>
     
     <script>
       function sendValue(){
         window.location.href="https://shaojindeng.github.io?key1=ShaojinDengTest&key2=echod8900@163.com";
-        alert("success!");
-        document.addEventListener('DOMContentLoaded', function() {
+      };
+      function showValue(){
+          document.addEventListener('DOMContentLoaded', function() {
           console.log('web--',dataLayer,dataLayer[3].customerid)
           var key1Value = dataLayer[3].customerid;
           var key2Value = dataLayer[3].customeremail;
