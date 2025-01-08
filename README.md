@@ -1,1 +1,1 @@
-test file
+A file for IMPACT test.
