@@ -34,10 +34,13 @@
       </div>
     
     <script type="text/javascript">
+      boolean showKey = false;
       window.onload = function(){
-        console.log('window.onload--');
-        document.getElementById('displayKey').hidden = true;
-        console.log('document.getElementById--',document.getElementById('displayKey'));
+        console.log('document.getElementById.hidden --',document.getElementById('displayKey').hidden );
+        if(!this.showKey){
+          document.getElementById('displayKey').hidden = this.showKey = true;
+          console.log('document.getElementById--',document.getElementById('displayKey'),this.showKey);
+        }
       };
       function sendValue(){
          window.location.href="https://shaojindeng.github.io?key1=ShaojinDengTest&key2=echod8900@163.com";
