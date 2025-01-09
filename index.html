@@ -28,17 +28,16 @@
     <div>
       <h3>Parameters below are returned from GTM</h3>
       <button onclick=showValue()" > SHOW </button>
-      <div>customerid:<div id="key1Display"></div></div>
-      <div>customeremail:<div id="key2Display"></div></div>
-    
+      <div>customerid: <span id="key1Display"></span></div>
+      <div>customeremail: <span id="key2Display"></span></div>
     </div>
     
     <script>
       function sendValue(){
-        window.location.href="https://shaojindeng.github.io?key1=ShaojinDengTest&key2=echod8900@163.com";
+         window.location.href="https://shaojindeng.github.io?key1=ShaojinDengTest&key2=echod8900@163.com";
       }
       function showValue(){
-         console.log('web0--',dataLayer,dataLayer[3])
+          console.log(showValue')
           document.addEventListener('DOMContentLoaded', function() {
           console.log('web--',dataLayer,dataLayer[3].customerid)
           var key1Value = dataLayer[3].customerid;
@@ -47,8 +46,6 @@
           document.getElementById('key2Display').textContent = key2Value;
         });
       }
-
-    
     </script>
   </body>
   
