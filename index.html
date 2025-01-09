@@ -38,13 +38,17 @@
       };
       function showValue(){
           console.log('showValue',this.dataLayer,this.dataLayer[3],'--end');
-          document.addEventListener('DOMContentLoaded', function() {
-          console.log('web--',dataLayer,dataLayer[3]);
-          var key1Value = dataLayer[3].customerid;
-          var key2Value = dataLayer[3].customeremail;
+          var key1Value = this.dataLayer[3].customerid;
+          var key2Value = this.dataLayer[3].customeremail;
           document.getElementById('key1Display').textContent = key1Value;
           document.getElementById('key2Display').textContent = key2Value;
-        });
+        //   document.addEventListener('DOMContentLoaded', function() {
+        //   console.log('web--',dataLayer,dataLayer[3]);
+        //   var key1Value = dataLayer[3].customerid;
+        //   var key2Value = dataLayer[3].customeremail;
+        //   document.getElementById('key1Display').textContent = key1Value;
+        //   document.getElementById('key2Display').textContent = key2Value;
+        // });
       }
     </script>
   </body>
