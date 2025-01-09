@@ -27,7 +27,7 @@
       </div>
     <!-- 在网页上显示存储在GTM的变量 -->
       <div >
-        <h3>Display parameters from GTM</h3>
+        <h3>Click the button "SHOW" to display parameters from GTM</h3>
         <button onclick="showValue()" > SHOW </button>
         <div>customerid: <span id="key1Display"></span></div>
         <div>customeremail: <span id="key2Display"></span></div>
@@ -35,19 +35,13 @@
     
     <script type="text/javascript">
       function sendValue(){
-        console.log('window.location.href1--',window.location.href)
          window.location.href="https://shaojindeng.github.io?key1=ShaojinDengTest&key2=echod8900@163.com";
-        console.log('window.location.href2--',window.location.href)
-         // this.showValue();
-         // console.log('exe1')
-         // return ;
       };
       function showValue(){
           var key1Value = this.dataLayer[3].customerid;
           var key2Value = this.dataLayer[3].customeremail;
           document.getElementById('key1Display').textContent = key1Value;
           document.getElementById('key2Display').textContent = key2Value;
-          console.log('exe2  key1Value-',key1Value)
       }
     </script>
   </body>
