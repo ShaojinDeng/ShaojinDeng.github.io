@@ -20,21 +20,27 @@
     <!-- End Google Tag Manager (noscript) -->
     
     <h1>Welcome to the demo page</h1>
+    <!--  触发GTM trriger的点击事件 -->
       <div>
-        <h3>Click the button "SEND" to send the url key value to GTM</h3>
+        <h3>Click the button "SEND" to trigger the GTM</h3>
         <button onclick="sendValue()" > SEND </button>
       </div>
-
-    <div>
-      <h3>Parameters below are returned from GTM</h3>
-      <button onclick="showValue()" > SHOW </button>
-      <div>customerid: <span id="key1Display"></span></div>
-      <div>customeremail: <span id="key2Display"></span></div>
-    </div>
+    <!-- 在网页上显示存储在GTM的变量 -->
+      <div id="displayKey">
+        <h3>Click the button ”SHOW“ to display parameters from GTM</h3>
+        <button onclick="showValue()" > SHOW </button>
+        <div>customerid: <span id="key1Display"></span></div>
+        <div>customeremail: <span id="key2Display"></span></div>
+      </div>
     
     <script>
+      window.onload = function(){
+        var displayElem = document.getElementById('displayKey');
+        this.displayElem.hidden = true;
+      };
       function sendValue(){
          window.location.href="https://shaojindeng.github.io?key1=ShaojinDengTest&key2=echod8900@163.com";
+         this.displayElem.hidden = false;
       };
       function showValue(){
           var key1Value = this.dataLayer[3].customerid;
