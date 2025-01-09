@@ -26,22 +26,22 @@
         <button onclick="sendValue()" > SEND </button>
       </div>
     <!-- 在网页上显示存储在GTM的变量 -->
-      <div id="displayKey">
+      <div >
         <h3>Click the button ”SHOW“ to display parameters from GTM</h3>
-        <button onclick="showValue()" > SHOW </button>
+<!--         <button onclick="showValue()" > SHOW </button> -->
         <div>customerid: <span id="key1Display"></span></div>
         <div>customeremail: <span id="key2Display"></span></div>
       </div>
     
     <script type="text/javascript">
-      boolean showKey = false;
-      window.onload = function(){
-        console.log('document.getElementById.hidden --',document.getElementById('displayKey').hidden );
-        if(!this.showKey){
-          document.getElementById('displayKey').hidden = this.showKey = true;
-          console.log('document.getElementById--',document.getElementById('displayKey'),this.showKey);
-        }
-      };
+      // boolean showKey = false;
+      // window.onload = function(){
+      //   console.log('document.getElementById.hidden --',document.getElementById('displayKey').hidden );
+      //    if(!this.showKey){
+      //     document.getElementById('displayKey').hidden = this.showKey = true;
+      //     console.log('document.getElementById--',document.getElementById('displayKey'),this.showKey);
+      //    }
+      // };
       function sendValue(){
          window.location.href="https://shaojindeng.github.io?key1=ShaojinDengTest&key2=echod8900@163.com";
          document.getElementById('displayKey').hidden = false;
