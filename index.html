@@ -36,13 +36,12 @@
     <script type="text/javascript">
       window.onload = function(){
         console.log('window.onload--');
-        var displayElem = document.getElementById('displayKey');
-        displayElem.hidden = true;
-        console.log('this.displayElem.hidden--',displayElem,displayElem.hidden );
+        document.getElementById('displayKey').hidden = true;
+        console.log('document.getElementById--',document.getElementById('displayKey'));
       };
       function sendValue(){
          window.location.href="https://shaojindeng.github.io?key1=ShaojinDengTest&key2=echod8900@163.com";
-         this.displayElem.hidden = false;
+         document.getElementById('displayKey').hidden = false;
       };
       function showValue(){
           var key1Value = this.dataLayer[3].customerid;
