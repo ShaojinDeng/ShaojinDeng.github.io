@@ -37,7 +37,7 @@
          window.location.href="https://shaojindeng.github.io?key1=ShaojinDengTest&key2=echod8900@163.com";
       };
       function showValue(){
-          console.log('showValue');
+          console.log('showValue',this.dataLayer,this.dataLayer[3]);
           document.addEventListener('DOMContentLoaded', function() {
           console.log('web--',dataLayer,dataLayer[3]);
           var key1Value = dataLayer[3].customerid;
