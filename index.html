@@ -36,12 +36,15 @@
       function sendValue(){
          window.location.href="https://shaojindeng.github.io?key1=ShaojinDengTest&key2=echod8900@163.com";
          this.showValue();
+         console.log('exe1')
+         return ;
       };
       function showValue(){
           var key1Value = this.dataLayer[3].customerid;
           var key2Value = this.dataLayer[3].customeremail;
           document.getElementById('key1Display').textContent = key1Value;
           document.getElementById('key2Display').textContent = key2Value;
+          console.log('exe2  key1Value-',key1Value)
       }
     </script>
   </body>
